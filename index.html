@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./app.js" defer></script>
+  <script src="./regexing.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Estadística</title>
+</head>
+<body>
+  <header>
+    <h1>Estadística</h1>
+  </header>
+  <main>
+    <div class="wrapper">
+      <section class="inputs">
+        <div class="inputs_wrapper">
+            <label for="data">Numeros</label>
+            <input type="text" name="data" placeholder="Numeros" id="data" class="input">
+          <div class="inputs_div">
+            <label for="request">Intervalos</label>
+            <input type="text" name="request" placeholder="Intervalos" id="req" class="input">
+          </div>
+          <div class="inputs_div">
+            <label for="posicion" class="label_pos">Posicion</label>
+            <div class="pos_div">
+              <input type="text" name="posicion" placeholder="Posicion" id="pos" class="input">
+              <input type="text" name="quantity" placeholder="Cantidad de numeros" id="quantity" class="input">
+              <input type="text" name="parts" placeholder="Partes" id="parts" class="input">
+            </div>
+          </div>
+          <button type="button" id="calcular">Calcular</button>
+        </div>
+      </section>
+      <section class="outputs">
+        <div class="outputs_wrapper">
+          <p>Ordenado: <span id="sort"></span></p>
+          <p>Cantidad de números: <span id="suma"></span></p>
+          <p>Mínimo: <span id="min"></span></p>
+          <p>Máximo: <span id="max"></span></p>
+          <p>Intervalos: <span id="intervals"></span></p>
+          <p>Posicion: <span id="kpos"></span></p>
+          <p>Promedio: <span id="prom"></span></p>
+          <p>Moda: <span id="moda"></span></p>
+          <p>Mediana: <span id="mediana"></span></p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="background"></div>
+</body> 
+</html>
