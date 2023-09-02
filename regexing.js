@@ -60,10 +60,10 @@ action_button.addEventListener("click", function () {
   const sorted = sortArray(numbers, (a, b) => a - b);
 
   // Output replace
-  sort_output.innerHTML = sorted;
-  min_output.innerHTML = min(numbers);
-  max_output.innerHTML = max(numbers);
-  intervals_output.innerHTML = calcInterval(numbers, req);
+  sort_output.innerHTML = sorted.toString().replace(/,/g, ' ');
+  min_output.innerHTML = Math.min(...numbers);
+  max_output.innerHTML = Math.max(...numbers);
+  intervals_output.innerHTML = calcInterval(numbers, req).toString().replace(/,/g, ' ');
   suma_output.innerHTML = numbers.length;
   kpos_output.innerHTML = calcPos(pos_input.value, parseInt(quantity_input.value), parts_input.value);
   prom_output.innerHTML = prom(numbers);

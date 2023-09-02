@@ -43,7 +43,7 @@ function mediana(sorted) {
       let n2 = sorted[mid-1];
       return (n1+n2)/2;
     } else {
-      return sorted[Math.floor(mid)];
+      return sorted[Math.trunc(mid)];
     }
   }
 }
@@ -77,7 +77,16 @@ function moda(sorted) {
         res += ns[index][0] + ', '
       }
     }
-    res += ' repetido ' + ns[0][1] + ' veces'
+    if (res.length == 1) {
+      res += ' repetido ';
+    } else {
+      res += ' repetidos ';
+    }
+    if (ns[0][1] == 1) {
+      res += '1 vez'
+    } else {
+      res += ns[0][1] + ' veces'
+    }
     return res;
   }
 }
